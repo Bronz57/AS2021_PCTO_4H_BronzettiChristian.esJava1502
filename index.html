@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mieiStili.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/mieiScript.js"></script>
+    </head>
+    <body>
+
+    <!-- container principale -->
+    <div class="container-fluid" id="container1">
+        <!-- prima riga coi bottoni-->
+        <div class="row" id="row1">
+            <div class="col">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <button class="navbar-toggler" id="btnNav" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <div class="col" id="home">
+                                <a class="nav-item nav-link active" href="#">
+                                    <button type="button" class="btn btn-outline-dark" >HOME</button>
+                                </a>
+                            </div>
+                       
+                            <div class="col" id="chiSiamo">
+                                <a class="nav-item nav-link active" href="#">
+                                    <button type="button" class="btn btn-outline-dark"  id="btnChiSiamo">CHI SIAMO</button>
+                                </a>
+                            </div>
+    
+                            <div class="col" id="mission">
+                                <a class="nav-item nav-link active" href="#">
+                                    <button type="button" class="btn btn-outline-dark" >MISSION</button>
+                                </a>
+                            </div>
+    
+                            <div class="col">
+                                <a class="nav-item nav-link active" href="#">
+                                    <button type="button" class="btn btn-outline-dark" >PORTFOLIO</button>
+                                </a>
+                            </div>
+    
+                            <div class="col" id="contatti">
+                                <a class="nav-item nav-link active" href="#">
+                                    <button type="button" class="btn btn-outline-dark" >CONTATTI</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- secondo container contenente una riga con le macro celle A e B -->
+        <div class="container-fluid">
+
+            <div class="row" id="riga2">
+                <!-- macro cella A -->
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col" id="riga2_colonna1">
+                            <ul class="list-group" id="listaDaMostrare">
+                               
+                            </ul>
+                        </div> 
+                        <div class="col" id="riga2_colonna1">2</div> 
+                    </div>
+         
+                    <div class="row" id="riga3">
+                        <div class="col"  id="riga3_colonna1">3</div> 
+                        <div class="col"  id="riga3_colonna1">4</div> 
+                        <div class="col"  id="riga3_colonna1_c">5</div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col" id="riga4_colonna1">
+                            <div class="row" id="rowNome">
+                                <div class="col-2" id="colNome">
+                                    NOME
+                                </div>
+                                <div class="col" id="">
+                                    <input type="text" placeholder="es: Mario" name="txtNome" id="txtNome">
+                                </div>
+                            </div>
+
+                            <div class="row" id="rowCognome">
+                                <div class="col-2" id="colCognome">
+                                    COGNOME
+                                </div>
+                                <div class="col" id="colTxtCognome">
+                                    <input type="text" placeholder="es: Rossi" name="txtCognome" id="txtCognome">
+                                </div>
+                                <div class="col" id="colBtnInserisci" >
+                                    <input type="button" value="INSERISCI" id="btnInserisci" class="btn btn-outline-dark btn-sm"/>
+                                </div>
+
+                                <div class="col">
+                                    <input type="button" class="btn btn-outline-dark btn-sm" id="btnMostraLista" value="MOSTRA LISTA"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- macro cella B -->
+                <div class="col" id="riga1_colonna2">
+                    <div class="row" id="rowNominativo">
+                        <div class="col">
+                            <p id="nominativi">
+                                NOMINATIVI
+                            </p>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!-- Modale accettazione -->
+     <div class="modal fade" id="modal-accettazione" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Conferma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="testo-modal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnAnnulla">Annulla</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnAccetta">Accetto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale errore -->
+    <div class="modal" tabindex="-1" id="error-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Errore</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-error-text"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Capito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+</body>
+</html>
